@@ -7,5 +7,6 @@
 
 import Foundation
 
-print("Hello, World!")
+var currentDay = Day1()
 
+currentDay.part2()
