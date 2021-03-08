@@ -33,19 +33,15 @@ class Day6 {
     }
     
     func part1() {
-        bothPartsSolution(operation: getMostUsedInColumn)
+        bothPartsSolution(operation: { num in
+            getFrequencyMap(n: num).max(by: { $0.value < $1.value })!.key
+        })
     }
     
     func part2() {
-        bothPartsSolution(operation: getLeastUsedInColumn)
-    }
-    
-    func getMostUsedInColumn(n : Int) -> Character {
-        return getFrequencyMap(n: n).max(by: { $0.value < $1.value })!.key
-    }
-    
-    func getLeastUsedInColumn(n : Int) -> Character {
-        return getFrequencyMap(n: n).min(by: { $0.value < $1.value })!.key
+        bothPartsSolution(operation: { num in
+            getFrequencyMap(n: num).min(by: { $0.value < $1.value })!.key
+        })
     }
     
     func getFrequencyMap(n : Int) -> [Character : Int] {

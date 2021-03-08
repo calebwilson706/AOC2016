@@ -7,6 +7,8 @@
 
 import Foundation
 
-var currentDay = Day6()
+var currentDay = Day7()
 
 currentDay.part2()
+
+
