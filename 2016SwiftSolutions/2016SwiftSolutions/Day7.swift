@@ -32,8 +32,8 @@ private func getStringComponentsFromAddress(item : String) -> IPasComponents {
 
 
 
-private func parseMatchesToStringArray(regexStatement : NSRegularExpression, _ str : String) -> [String] {
-    let rangeOfString = NSRange(location: 0, length: str.utf8.count)
+func parseMatchesToStringArray(regexStatement : NSRegularExpression, _ str : String) -> [String] {
+    let rangeOfString = NSRange(location: 0, length: str.utf16.count)
     return (regexStatement.matches(in: str, range: rangeOfString).map {
         String(str[Range($0.range, in: str)!])
     })
