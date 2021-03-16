@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import PuzzleBox
 
 struct IPasComponents {
     let largerStrings : [String]

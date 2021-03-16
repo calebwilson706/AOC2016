@@ -6,24 +6,15 @@
 //
 
 import Foundation
-class Day9 {
-    var inputString : String
+import PuzzleBox
+
+class Day9 : PuzzleClass, PuzzleClassProtocol {
     
-    init() {
-        do {
-            let filePath = "/Users/calebjw/Documents/Developer/AdventOfCode/2016/Inputs/Day9Input.txt"
-            let contents = try String(contentsOfFile: filePath)
-            inputString = contents
-        } catch {
-            inputString = ""
-            print(error)
-        }
-    }
     func part1() {
-        print(getTotalLengthDecoded(for: inputString))
+        print(getTotalLengthDecoded(for: inputStringUnparsed!))
     }
     func part2() {
-        print(getLengthOfDecodedPart2(for: inputString))
+        print(getLengthOfDecodedPart2(for: inputStringUnparsed!))
     }
     private func getTotalLengthDecoded(for str : String) -> Int {
         var answer = 0

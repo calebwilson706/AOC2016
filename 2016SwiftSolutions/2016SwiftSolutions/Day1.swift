@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import PuzzleBox
 
 
 class PointDay1Part1 {
@@ -15,41 +16,6 @@ class PointDay1Part1 {
     init(x: Int, y: Int) {
         self.x = x
         self.y = y
-    }
-}
-
-struct PointStruct : Hashable {
-    let x : Int
-    let y : Int
-}
-
-enum Directions {
-    case NORTH, EAST, SOUTH, WEST
-    
-    func turnRight() -> Directions {
-        switch self {
-        case .NORTH:
-            return .EAST
-        case .EAST:
-            return .SOUTH
-        case .SOUTH:
-            return .WEST
-        case .WEST:
-            return .NORTH
-        }
-    }
-    
-    func turnLeft() -> Directions {
-        switch self {
-        case .NORTH:
-            return .WEST
-        case .EAST:
-            return .NORTH
-        case .SOUTH:
-            return .EAST
-        case .WEST:
-            return .SOUTH
-        }
     }
 }
 
@@ -97,12 +63,12 @@ class Day1 {
         print(abs(answer.x) + abs(answer.y))
     }
     
-    func part2helper() -> PointStruct {
-        var current = PointStruct(x: 0, y: 0)
+    func part2helper() -> Point {
+        var current = Point(x: 0, y: 0)
         var direction = Directions.NORTH
-        var visitedLocations : [PointStruct : Bool] = [current : true]
+        var visitedLocations : [Point : Bool] = [current : true]
         
-        func checkIfMet(current : PointStruct) -> PointStruct? {
+        func checkIfMet(current : Point) -> Point? {
             if visitedLocations[current] == true {
                 return current
             } else {
@@ -127,7 +93,7 @@ class Day1 {
             case .NORTH:
                 
                 for y in current.y + 1 ... current.y + num {
-                    current = PointStruct(x: current.x, y: y)
+                    current = Point(x: current.x, y: y)
                     if let answer = checkIfMet(current: current) {
                         return answer
                     }
@@ -136,14 +102,14 @@ class Day1 {
                 
             case .EAST:
                 for x in current.x + 1 ... current.x + num {
-                    current = PointStruct(x: x, y: current.y)
+                    current = Point(x: x, y: current.y)
                     if let answer = checkIfMet(current: current) {
                         return answer
                     }
                 }
             case .SOUTH:
                 for y in (current.y - num ... current.y - 1).reversed() {
-                    current = PointStruct(x: current.x, y: y)
+                    current = Point(x: current.x, y: y)
                     
                     if let answer = checkIfMet(current: current) {
                         return answer
@@ -151,7 +117,7 @@ class Day1 {
                 }
             case .WEST:
                 for x in (current.x - num ... current.x - 1).reversed() {
-                    current = PointStruct(x: x, y: current.y)
+                    current = Point(x: x, y: current.y)
 
                     if let answer = checkIfMet(current: current) {
                         return answer

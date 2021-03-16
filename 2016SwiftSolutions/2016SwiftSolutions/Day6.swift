@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import PuzzleBox
 
 class Day6 {
     var inputs = [String]()

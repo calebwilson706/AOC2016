@@ -6,24 +6,10 @@
 //
 
 import Foundation
+import PuzzleBox
 
 private enum Movements {
     case U, R, D, L
-}
-
-extension PointStruct {
-    func up() -> PointStruct {
-        return PointStruct(x: self.x, y: self.y + 1)
-    }
-    func down() -> PointStruct {
-        return PointStruct(x: self.x, y: self.y - 1)
-    }
-    func left() -> PointStruct {
-        return PointStruct(x: self.x - 1, y: self.y)
-    }
-    func right() -> PointStruct {
-        return PointStruct(x: self.x + 1, y: self.y)
-    }
 }
 
 
@@ -32,15 +18,15 @@ class Day2 {
     let instructionText : String
     
     let mapOfPointsPart1 = [
-        PointStruct(x: 0, y: 0) : 7,
-        PointStruct(x: 0, y: 1) : 4,
-        PointStruct(x: 0, y: 2) : 1,
-        PointStruct(x: 1, y: 0) : 8,
-        PointStruct(x: 1, y: 1) : 5,
-        PointStruct(x: 1, y: 2) : 2,
-        PointStruct(x: 2, y: 0) : 9,
-        PointStruct(x: 2, y: 1) : 6,
-        PointStruct(x: 2, y: 2) : 3
+        Point(x: 0, y: 0) : 7,
+        Point(x: 0, y: 1) : 4,
+        Point(x: 0, y: 2) : 1,
+        Point(x: 1, y: 0) : 8,
+        Point(x: 1, y: 1) : 5,
+        Point(x: 1, y: 2) : 2,
+        Point(x: 2, y: 0) : 9,
+        Point(x: 2, y: 1) : 6,
+        Point(x: 2, y: 2) : 3
     ]
     
     init() {
@@ -56,7 +42,7 @@ class Day2 {
     }
     
     func part1() {
-        var currentPoint = PointStruct(x: 1, y: 1)
+        var currentPoint = Point(x: 1, y: 1)
         
         var answer = [Int]()
         
@@ -92,32 +78,32 @@ class Day2 {
     }
     
     func part2() {
-        let mapOfPointsPart2 : [PointStruct : Character] = [
+        let mapOfPointsPart2 : [Point : Character] = [
             //numbers
             
-            PointStruct(x: -2, y: 0) : "5",
-            PointStruct(x: -1, y: 0) : "6",
-            PointStruct(x: 0, y: 0) :  "7",
-            PointStruct(x: 1, y: 0) :  "8",
-            PointStruct(x: 2, y: 0) :  "9",
-            PointStruct(x: -1, y: 1) : "2",
-            PointStruct(x: 0, y: 1) :  "3",
-            PointStruct(x: 1, y: 1) :  "4",
-            PointStruct(x: 0, y: 2) :  "1",
+            Point(x: -2, y: 0) : "5",
+            Point(x: -1, y: 0) : "6",
+            Point(x: 0, y: 0) :  "7",
+            Point(x: 1, y: 0) :  "8",
+            Point(x: 2, y: 0) :  "9",
+            Point(x: -1, y: 1) : "2",
+            Point(x: 0, y: 1) :  "3",
+            Point(x: 1, y: 1) :  "4",
+            Point(x: 0, y: 2) :  "1",
             
             //letters
             
-            PointStruct(x: -1, y: -1) : "A",
-            PointStruct(x: 0, y: -1) : "B",
-            PointStruct(x: 1, y: -1) : "C",
-            PointStruct(x: 0, y: -2) : "D"
+            Point(x: -1, y: -1) : "A",
+            Point(x: 0, y: -1) : "B",
+            Point(x: 1, y: -1) : "C",
+            Point(x: 0, y: -2) : "D"
         ]
         
         var answer = [Character]()
-        var currPoint = PointStruct(x: -2, y: 0)
+        var currPoint = Point(x: -2, y: 0)
         
         instructionText.forEach { it in
-            let tempNext : PointStruct
+            let tempNext : Point
             var isEnd = false
             
             switch it {

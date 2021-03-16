@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import PuzzleBox
 
-var currentDay = Day9()
+var currentDay = Day9(filePath: "/Users/calebjw/Documents/Developer/AdventOfCode/2016/Inputs/Day9Input.txt")
 currentDay.part2()
 
 

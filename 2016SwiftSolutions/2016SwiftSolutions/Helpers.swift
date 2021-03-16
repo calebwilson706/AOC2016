@@ -6,19 +6,8 @@
 //
 
 import Foundation
+import PuzzleBox
 
-
-extension StringProtocol {
-    subscript(offset: Int) -> Character {
-        self[index(startIndex, offsetBy: offset)]
-    }
-}
-
-func timeTest(call : () -> Void, num : Int, factor : Double = 1.0){
-    let start = CFAbsoluteTimeGetCurrent()
-    call()
-    print("test \(num) : \((CFAbsoluteTimeGetCurrent() - start)*factor)")
-}
 
 
 extension String {
