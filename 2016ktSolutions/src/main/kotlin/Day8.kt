@@ -103,7 +103,13 @@ object Day8 {
     }
 }
 
-data class Point(val x : Int, val y : Int)
+data class Point(val x : Int, val y : Int) {
+    fun up() = Point(this.x, this.y + 1)
+    fun down() = Point(this.x, this.y - 1)
+    fun right() = Point(this.x + 1, this.y)
+    fun left() = Point(this.x - 1, this.y)
+}
+
 
 enum class Day8Instructions {
     Rect, RotateRow, RotateColumn
