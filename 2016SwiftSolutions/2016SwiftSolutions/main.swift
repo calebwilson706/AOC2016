@@ -8,7 +8,7 @@
 import Foundation
 import PuzzleBox
 
-var currentDay = Day9(filePath: "/Users/calebjw/Documents/Developer/AdventOfCode/2016/Inputs/Day9Input.txt")
-currentDay.part2()
+var currentDay = Day12(filePath: "/Users/calebjw/Documents/Developer/AdventOfCode/2016/Inputs/Day12Input.txt")
 
 
+timeTest(call: currentDay.part2, num : 1)
