@@ -35,7 +35,7 @@ object Day16 {
 
     private fun getChecksumFor(string : String) : String {
         val chunksOfString = string.chunked(2)
-        var answer = StringBuilder()
+        val answer = StringBuilder()
 
         chunksOfString.forEach {
             answer.append(if (it[0] == it[1]) {
