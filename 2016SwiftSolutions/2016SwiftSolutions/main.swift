@@ -8,4 +8,10 @@
 import Foundation
 import PuzzleBox
 
-Day16().part2()
+
+
+for num in 6...100 {
+    Day19().part2ShowPattern(amountOfElves: num)
+}
+Day19().part2()
+

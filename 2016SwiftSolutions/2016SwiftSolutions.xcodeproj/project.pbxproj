@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AB250C5C25F6677D00FCC4EC /* Day7.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB250C5B25F6677D00FCC4EC /* Day7.swift */; };
 		AB33162C260946730052A9E7 /* Day16.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB33162B260946730052A9E7 /* Day16.swift */; };
+		AB3F991A260B8AB70022C46D /* Day19.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3F9919260B8AB70022C46D /* Day19.swift */; };
 		AB68EE0925F183FC00338C70 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB68EE0825F183FC00338C70 /* main.swift */; };
 		AB68EE1125F185C200338C70 /* Day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB68EE1025F185C200338C70 /* Day1.swift */; };
 		AB68EE1425F188AB00338C70 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB68EE1325F188AB00338C70 /* Helpers.swift */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		AB250C5B25F6677D00FCC4EC /* Day7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day7.swift; sourceTree = "<group>"; };
 		AB33162B260946730052A9E7 /* Day16.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day16.swift; sourceTree = "<group>"; };
+		AB3F9919260B8AB70022C46D /* Day19.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day19.swift; sourceTree = "<group>"; };
 		AB68EE0525F183FC00338C70 /* 2016SwiftSolutions */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 2016SwiftSolutions; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB68EE0825F183FC00338C70 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		AB68EE1025F185C200338C70 /* Day1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				ABB9004E2602937000E33395 /* Day12.swift */,
 				AB97DA2726079713008269EF /* Day15.swift */,
 				AB33162B260946730052A9E7 /* Day16.swift */,
+				AB3F9919260B8AB70022C46D /* Day19.swift */,
 			);
 			path = 2016SwiftSolutions;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				ABB9004F2602937000E33395 /* Day12.swift in Sources */,
 				AB250C5C25F6677D00FCC4EC /* Day7.swift in Sources */,
 				ABB9004C26027CA400E33395 /* Day11.swift in Sources */,
+				AB3F991A260B8AB70022C46D /* Day19.swift in Sources */,
 				AB68EE0925F183FC00338C70 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
