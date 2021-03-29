@@ -10,8 +10,6 @@ import PuzzleBox
 
 enum InstructionsDay12 {
     case cpy, inc, dec, jnz
-    
-    
 }
 
 struct Day12Instruction {

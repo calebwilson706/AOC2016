@@ -10,8 +10,6 @@ import PuzzleBox
 
 
 
-for num in 6...100 {
-    Day19().part2ShowPattern(amountOfElves: num)
-}
-Day19().part2()
+let currentDay = Day23(filePath: "/Users/calebjw/Documents/Developer/AdventOfCode/2016/Inputs/Day23Input.txt")
 
+currentDay.part2()
