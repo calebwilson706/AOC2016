@@ -8,8 +8,7 @@
 import Foundation
 import PuzzleBox
 
+//Day24ConnectionFinder(filePath: "/Users/calebjw/Documents/Developer/AdventOfCode/2016/Inputs/Day24Input.txt").displayConnections()
+Day24().part2()
 
 
-let currentDay = Day23(filePath: "/Users/calebjw/Documents/Developer/AdventOfCode/2016/Inputs/Day23Input.txt")
-
-currentDay.part2()

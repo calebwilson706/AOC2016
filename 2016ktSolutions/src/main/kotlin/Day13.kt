@@ -17,18 +17,22 @@ object Day13 {
                 answer = currentMoves
                 return
             }
+
             if (!isThisPointAWall(point.up()) && hasBeenVisited[point.up()] == null) {
                 hasBeenVisited[point.up()] = true
                 findPoint(point.up(), currentMoves + 1,hasBeenVisited)
             }
+
             if (!isThisPointAWall(point.down()) && hasBeenVisited[point.down()] == null) {
                 hasBeenVisited[point.down()] = true
                 findPoint(point.down(), currentMoves + 1,hasBeenVisited)
             }
+
             if (!isThisPointAWall(point.right()) && hasBeenVisited[point.right()] == null) {
                 hasBeenVisited[point.right()] = true
                 findPoint(point.right(), currentMoves + 1,hasBeenVisited)
             }
+            
             if (!isThisPointAWall(point.left()) && hasBeenVisited[point.left()] == null) {
                 hasBeenVisited[point.left()] = true
                 findPoint(point.left(), currentMoves + 1,hasBeenVisited)
