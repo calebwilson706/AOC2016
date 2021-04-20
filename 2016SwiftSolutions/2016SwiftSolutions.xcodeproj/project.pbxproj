@@ -22,6 +22,7 @@
 		ABDF5EFD25F26AC70051896A /* Day2.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDF5EFC25F26AC70051896A /* Day2.swift */; };
 		ABE215F825F58499008574A0 /* Day6.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE215F725F58499008574A0 /* Day6.swift */; };
 		ABF19AF126012AED008CC4EA /* PuzzleBox in Frameworks */ = {isa = PBXBuildFile; productRef = ABF19AF026012AED008CC4EA /* PuzzleBox */; };
+		ABFB8DE6262F5AC100B322C0 /* Day25.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFB8DE5262F5AC100B322C0 /* Day25.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,6 +54,7 @@
 		ABD85AAF25FB78590033788F /* Day9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day9.swift; sourceTree = "<group>"; };
 		ABDF5EFC25F26AC70051896A /* Day2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day2.swift; sourceTree = "<group>"; };
 		ABE215F725F58499008574A0 /* Day6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day6.swift; sourceTree = "<group>"; };
+		ABFB8DE5262F5AC100B322C0 /* Day25.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day25.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				AB3F9919260B8AB70022C46D /* Day19.swift */,
 				AB8677D026124E2C00F1EE0D /* Day23.swift */,
 				AB5D4FA4262CDAF100ED8B09 /* Day24 */,
+				ABFB8DE5262F5AC100B322C0 /* Day25.swift */,
 			);
 			path = 2016SwiftSolutions;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				AB68EE1125F185C200338C70 /* Day1.swift in Sources */,
 				AB33162C260946730052A9E7 /* Day16.swift in Sources */,
 				ABE215F825F58499008574A0 /* Day6.swift in Sources */,
+				ABFB8DE6262F5AC100B322C0 /* Day25.swift in Sources */,
 				ABDF5EFD25F26AC70051896A /* Day2.swift in Sources */,
 				ABD85AB025FB78590033788F /* Day9.swift in Sources */,
 				AB68EE1425F188AB00338C70 /* Helpers.swift in Sources */,

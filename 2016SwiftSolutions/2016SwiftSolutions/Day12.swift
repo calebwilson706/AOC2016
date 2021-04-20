@@ -8,12 +8,12 @@
 import Foundation
 import PuzzleBox
 
-enum InstructionsDay12 {
-    case cpy, inc, dec, jnz
+enum InstructionsDay12And25 {
+    case cpy, inc, dec, jnz, out
 }
 
 struct Day12Instruction {
-    let instruction : InstructionsDay12
+    let instruction : InstructionsDay12And25
     let firstValue : String
     var secondValue : String?
     
@@ -22,7 +22,7 @@ struct Day12Instruction {
     }
 }
 
-func getCorrectInstructionFromStringDay12(str : String?) -> InstructionsDay12 {
+func getCorrectInstructionFromStringDay12(str : String?) -> InstructionsDay12And25 {
     switch str {
     case "cpy":
         return .cpy
@@ -30,6 +30,8 @@ func getCorrectInstructionFromStringDay12(str : String?) -> InstructionsDay12 {
         return .inc
     case "dec":
         return .dec
+    case "out":
+        return .out
     default :
         return .jnz
     }
@@ -45,7 +47,7 @@ class Day12 : PuzzleClass {
             let instruction = getCorrectInstructionFromStringDay12(str: components.first)
             var newInstructionItem = Day12Instruction(instruction: instruction, firstValue: components[1], secondValue: nil)
             
-            if instruction != .dec && instruction != .inc {
+            if instruction != .dec && instruction != .inc && instruction != .out {
                 newInstructionItem.giveSecondNumber(this: components.last!)
             }
             
@@ -55,17 +57,19 @@ class Day12 : PuzzleClass {
         return allInstructions
     }
     
-    func solution(part : Int) {
+    func solution(aStart : Int, cStart : Int) -> Int? {
         let instructions = getInstructions()
         
         var registers = [
-            "a" : 0,
+            "a" : aStart,
             "b" : 0,
-            "c" : part - 1,
+            "c" : cStart,
             "d" : 0
         ]
         
         var index = 0
+        var outputString = ""
+        
         while (index < instructions.count) {
             let item = instructions[index]
             switch item.instruction {
@@ -80,6 +84,16 @@ class Day12 : PuzzleClass {
             case .jnz:
                 let checkShouldMove = Int(item.firstValue) ?? registers[item.firstValue]!
                 index += ((checkShouldMove == 0) ? 1 : Int(item.secondValue!) ?? registers[item.secondValue!]!) - 1
+            case .out:
+                outputString += "\(registers[item.firstValue] ?? -1)"
+            
+                if outputString.count > 9 {
+                    print(outputString)
+                    if outputString == "0101010101" {
+                        return(aStart)
+                    }
+                    return nil
+                }
             }
             
             index += 1
@@ -87,12 +101,13 @@ class Day12 : PuzzleClass {
         }
         
         print(registers)
+        return nil
     }
     
     func part1() {
-        solution(part: 1)
+        let _ = solution(aStart: 0, cStart: 0)
     }
     func part2() {
-        solution(part: 2)
+        let _ = solution(aStart: 1, cStart: 1)
     }
 }
